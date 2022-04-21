@@ -57,10 +57,10 @@ def get_factors(to_factor):
 # Main routine goes here
 
 # Heading
-statement_generator("Factors Calculator", "-")
+    statement_generator("Factor Calculator", "*")
 
 # Display instructions if user has not used the program before
-first_time = input("Press <enter> to see the instructions or any key to continue")
+first_time = input("Press <enter> to see the instructions or any key to continue: ")
 
 if first_time == "":
     instructions()
@@ -89,7 +89,7 @@ while keep_going == "":
     # output factors and comment
 
     # generate heading...
-    if var_to_factor ==1:
+    if var_to_factor == 1:
         heading = "One is special..."
 
     else:

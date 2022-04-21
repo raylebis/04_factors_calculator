@@ -11,7 +11,7 @@ def num_check(question):
             # ask user to enter a number
             response = int(input(question))
 
-            # checks number is more than zero
+            # checks number is less than 200
             if response < 201:
                 return response
 
