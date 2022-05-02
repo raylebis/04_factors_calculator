@@ -52,8 +52,12 @@ def num_check(question):
             print(error)
 
 # gets factors, returns a sorted list
-def get_factors(to_factor):
-
+def get_factors(num):
+    print('the factors of', num, 'are: ')
+    factor_list = []
+    for i in range(1, num+1):
+        if(num % i) ==
+        
 # Main routine goes here
 
 # Heading
