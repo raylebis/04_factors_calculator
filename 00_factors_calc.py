@@ -1,6 +1,9 @@
 # Functions go here
 
 # Puts series of symbols at start and end of text
+import math
+
+
 def statement_generator(text, decoration):
     
     # Make string with five characters
@@ -56,12 +59,35 @@ def get_factors(num):
     print('the factors of', num, 'are: ')
     factor_list = []
     for i in range(1, num+1):
-        if(num % i) ==
+
+        if(num % i) == 0:
+
+            print(i, end=' ')
+            factor_list.append()
+
+        
+    print()
+    print("That integer has {} factors". format(len(factor_list)))
+    if len(factor_list) == 2:
+        print("This is a prime number")
+
+    elif num ==  1:
+        print("1 is unity (Only has 1 factor, itself) ")
+
+    
+    int_num = int(num)
+    root = math.sqrt(int_num)
+
+    if int(root + 0.5) ** 2 == num:
+        print(num, 'is a perfect square')
+
+    else:
+        print(num, 'is not a perfect square')
         
 # Main routine goes here
 
 # Heading
-    statement_generator("Factor Calculator", "*")
+        statement_generator("Factor Calculator", "*")
 
 # Display instructions if user has not used the program before
 first_time = input("Press <enter> to see the instructions or any key to continue: ")
