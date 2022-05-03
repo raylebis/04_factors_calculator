@@ -25,6 +25,8 @@ def num_check(question):
 # gets factors, returns a sorted list
 def get_factor(to_factor):
     
+
+    
     
 
     

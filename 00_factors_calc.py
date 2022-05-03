@@ -63,8 +63,9 @@ def get_factors(num):
         if(num % i) == 0:
 
             print(i, end=' ')
-            factor_list.append()
+            #factor_list.append()
 
+            factor_list.sort
         
     print()
     print("That integer has {} factors". format(len(factor_list)))
@@ -74,13 +75,22 @@ def get_factors(num):
     elif num ==  1:
         print("1 is unity (Only has 1 factor, itself) ")
 
+    int_num = int(num)
+    root = math.sqrt
+
+    # Perfect square finder
+    if int(root + 0.5) ** 2 == num:
+        print(num, 'is a perfect square')
+
+    else:
+        print(num, 'is not a perfect square')
+
     
     int_num = int(num)
     root = math.sqrt(int_num)
 
     if int(root + 0.5) ** 2 == num:
         print(num, 'is a perfect square')
-
     else:
         print(num, 'is not a perfect square')
         
@@ -105,7 +115,7 @@ while keep_going == "":
     var_to_factor = num_check("Number: ")
 
     if var_to_factor !=1:
-        factor_list = get_factors(var_to_factor)
+        factor_list = get_factors(factor_list)
     else:
         factor_list = ""
         comment = "One is UNITY! it only has one factor. Itself"
@@ -123,7 +133,7 @@ while keep_going == "":
         heading = "One is special..."
 
     else:
-        heading = "Factos of {}".format(var_to_factor)
+        heading = "Factors of {}".format(var_to_factor)
 
     # Output factors and comment
     statement_generator(heading, "*")
