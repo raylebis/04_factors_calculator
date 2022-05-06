@@ -22,10 +22,45 @@ def num_check(question):
         except ValueError:
             print(error)
 
-# gets factors, returns a sorted list
-def get_factor(to_factor):
-    
+# gets factors, returns a sorted list    
+def get_factors(num):
+    print('the factors of', num, 'are: ')
+    factor_list = []
+    for i in range(1, num+1):
 
+        if(num % i) == 0:
+
+            print(i, end=' ')
+            #factor_list.append()
+
+            factor_list.sort
+        
+    print()
+    print("That integer has {} factors". format(len(factor_list)))
+    if len(factor_list) == 2:
+        print("This is a prime number")
+
+    elif num ==  1:
+        print("1 is unity (Only has 1 factor, itself) ")
+
+    int_num = int(num)
+    root = math.sqrt
+
+    # Perfect square finder
+    if int(root + 0.5) ** 2 == num:
+        print(num, 'is a perfect square')
+
+    else:
+        print(num, 'is not a perfect square')
+
+    int_num = int(num)
+    root = math.sqrt(int_num)
+
+    if int(root + 0.5) ** 2 == num:
+        print(num, 'is a perfect square')
+    else:
+        print(num, 'is not a perfect square')
+        
     
     
 

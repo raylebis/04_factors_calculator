@@ -14,7 +14,6 @@ def statement_generator(text, decoration):
 
     print()
     print(statement)
-    print()
 
     return ""
 
@@ -28,7 +27,6 @@ def instructions():
     print()
     print("Complete as many calculations as necessary, pressing <enter> at the end of each calculation or any key to quit.")
     return ""
-
 
 # checks input is a number more than a given value
 def num_check(question):
@@ -66,34 +64,10 @@ def get_factors(num):
             #factor_list.append()
 
             factor_list.sort
+
+            return factor_list
         
-    print()
-    print("That integer has {} factors". format(len(factor_list)))
-    if len(factor_list) == 2:
-        print("This is a prime number")
-
-    elif num ==  1:
-        print("1 is unity (Only has 1 factor, itself) ")
-
-    int_num = int(num)
-    root = math.sqrt
-
-    # Perfect square finder
-    if int(root + 0.5) ** 2 == num:
-        print(num, 'is a perfect square')
-
-    else:
-        print(num, 'is not a perfect square')
-
-    
-    int_num = int(num)
-    root = math.sqrt(int_num)
-
-    if int(root + 0.5) ** 2 == num:
-        print(num, 'is a perfect square')
-    else:
-        print(num, 'is not a perfect square')
-        
+ 
 # Main routine goes here
 
 # Heading
@@ -115,7 +89,7 @@ while keep_going == "":
     var_to_factor = num_check("Number: ")
 
     if var_to_factor !=1:
-        factor_list = get_factors(factor_list)
+        factor_list = get_factors(var_to_factor)
     else:
         factor_list = ""
         comment = "One is UNITY! it only has one factor. Itself"
@@ -131,9 +105,8 @@ while keep_going == "":
     # generate heading...
     if var_to_factor == 1:
         heading = "One is special..."
-
     else:
-        heading = "Factors of {}".format(var_to_factor)
+        comment = "Factors of {}".format(var_to_factor)
 
     # Output factors and comment
     statement_generator(heading, "*")
