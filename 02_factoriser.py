@@ -1,4 +1,23 @@
+
+import math
+
+
+
+def statement_generator(text, decoration):
+    
+    # Make string with five characters
+    ends = decoration * 5
+
+    # add decoration to start and end of statement
+    statement = "{}  {}  {}".format(ends, text, ends)
+
+    print()
+    print(statement)
+
+    return ""
+
 # checks input is a number more than a given value
+
 def num_check(question):
     valid = False
     while not valid:
@@ -24,35 +43,27 @@ def num_check(question):
 
 # gets factors, returns a sorted list    
 def get_factors(num):
-    print('the factors of', num, 'are: ')
+    print('The factors of', num, 'are: ')
     factor_list = []
     for i in range(1, num+1):
 
         if(num % i) == 0:
 
             print(i, end=' ')
-            #factor_list.append()
+            factor_list.append(i)
 
             factor_list.sort
         
     print()
     print("That integer has {} factors". format(len(factor_list)))
     if len(factor_list) == 2:
-        print("This is a prime number")
+        print(num, 'is a prime number')
 
     elif num ==  1:
         print("1 is unity (Only has 1 factor, itself) ")
 
-    int_num = int(num)
-    root = math.sqrt
-
     # Perfect square finder
-    if int(root + 0.5) ** 2 == num:
-        print(num, 'is a perfect square')
-
-    else:
-        print(num, 'is not a perfect square')
-
+    
     int_num = int(num)
     root = math.sqrt(int_num)
 
@@ -60,11 +71,7 @@ def get_factors(num):
         print(num, 'is a perfect square')
     else:
         print(num, 'is not a perfect square')
-        
-    
-    
 
-    
 
 # Loop to allow multiple calculations per session
 keep_going = ""
@@ -76,7 +83,7 @@ while keep_going == "":
     var_to_factor = num_check("Number: ")
 
     if var_to_factor !=1:
-        factor_list = get_factor(var_to_factor)
+        factor_list = get_factors(var_to_factor)
     else:
         factor_list = ""
         comment = "One is UNITY! it only has one factor. Itself"
@@ -90,7 +97,7 @@ while keep_going == "":
     # output factors and comment
 
     # generate heading...
-    if var_to_factor ==1:
+    if var_to_factor == 1:
         heading = "One is special..."
 
     else:

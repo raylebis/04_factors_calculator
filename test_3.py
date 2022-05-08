@@ -12,6 +12,7 @@ def statement_generator(text, decoration):
     # add decoration to start and end of statement
     statement = "{}  {}  {}".format(ends, text, ends)
 
+
     print()
     print(statement)
 
@@ -52,9 +53,10 @@ def num_check(question):
         except ValueError:
             print(error)
 
-# gets factors, returns a sorted list
+# gets factors, returns a sorted list    
 def get_factors(num):
     print('The factors of', num, 'are: ')
+    print()
     factor_list = []
     for i in range(1, num+1):
 
@@ -64,11 +66,9 @@ def get_factors(num):
             factor_list.append(i)
 
             factor_list.sort
+        
 
 # Main routine goes here
-
-# Heading
-statement_generator("Factor Calculator", "*")
 
 # Display instructions if user has not used the program before
 first_time = input("Press <enter> to see the instructions or any key to continue: ")
@@ -85,38 +85,30 @@ while keep_going == "":
     # ask user for number to be factored...
     var_to_factor = num_check("Number: ")
 
-    if var_to_factor !=1:
+    if var_to_factor != 1:
         factor_list = get_factors(var_to_factor)
     else:
         factor_list = ""
         comment = "One is UNITY! it only has one factor. Itself"
-    
-    print()
-    print("That integer has {} factors". format(factor_list))
-    if len(factor_list) == 2:
-        comment = "{} is a prime number.".format(var_to_factor)
 
-    elif var_to_factor ==  1:
-        print("1 is unity (Only has 1 factor, itself) ")
+    if factor_list == 2:
+        comment = var_to_factor, 'is a prime number'
 
     # Perfect square finder
     
     int_num = int(var_to_factor)
-    root = math.sqrt(int_num)
+    root = math.sqrt(var_to_factor)
 
-    if int (root + 0.5) ** 2 == var_to_factor:
-        comment = ("{} is a perfect square".format(var_to_factor))
-    else:
-        comment = ("{} is not a perfect square".format(var_to_factor))
+    if int(root + 0.5) ** 2 == var_to_factor:
+        comment = var_to_factor, 'is a perfect square'
 
     # generate heading...
     if var_to_factor == 1:
-        heading = "One is special..."
+        comment = "One is UNITY! it only has one factor. Itself"
     else:
-        comment = "Factors of {}".format(var_to_factor)
+        comment = ""
 
     # Output factors and comment
-    statement_generator(heading, "*")
     print()
     print(factor_list)
     print(comment)

@@ -1,5 +1,28 @@
 import random
 
+def num_check(question):
+    valid = False
+    while not valid:
+
+        error = "Please enter a number that is more than zero and less than 200"
+
+        try:
+
+            # ask user to enter a number
+            response = int(input(question))
+
+            # checks number is less than 200
+            if response < 201:
+                return response
+
+            # outputs error if input is invalid
+            else:
+                print(error)
+                print()
+
+        except ValueError:
+            print(error)
+
 # set up a list
 
 my_list = [2, 0, 9, 8, 7]

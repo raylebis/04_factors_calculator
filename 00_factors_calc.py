@@ -52,26 +52,14 @@ def num_check(question):
         except ValueError:
             print(error)
 
-# gets factors, returns a sorted list
+# gets factors, returns a sorted list   
+# gets factors, returns a sorted list    
 def get_factors(num):
-    print('the factors of', num, 'are: ')
-    factor_list = []
-    for i in range(1, num+1):
 
-        if(num % i) == 0:
-
-            print(i, end=' ')
-            #factor_list.append()
-
-            factor_list.sort
-
-            return factor_list
-        
- 
 # Main routine goes here
 
 # Heading
-        statement_generator("Factor Calculator", "*")
+    statement_generator("Factor Calculator", "*")
 
 # Display instructions if user has not used the program before
 first_time = input("Press <enter> to see the instructions or any key to continue: ")
@@ -88,7 +76,7 @@ while keep_going == "":
     # ask user for number to be factored...
     var_to_factor = num_check("Number: ")
 
-    if var_to_factor !=1:
+    if var_to_factor != 1:
         factor_list = get_factors(var_to_factor)
     else:
         factor_list = ""
