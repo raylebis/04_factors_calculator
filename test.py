@@ -91,9 +91,7 @@ while keep_going == "":
         factor_list = ""
         comment = "One is UNITY! it only has one factor. Itself"
     
-    print()
-    print("That integer has {} factors". format(factor_list))
-    if len(factor_list) == 2:
+    if (factor_list) == 2:
         comment = "{} is a prime number.".format(var_to_factor)
 
     elif var_to_factor ==  1:
@@ -107,16 +105,13 @@ while keep_going == "":
     if int (root + 0.5) ** 2 == var_to_factor:
         comment = ("{} is a perfect square".format(var_to_factor))
     else:
-        comment = ("{} is not a perfect square".format(var_to_factor))
+        comment = "{} is a prime number.".format(var_to_factor)
 
     # generate heading...
     if var_to_factor == 1:
         heading = "One is special..."
-    else:
-        comment = "Factors of {}".format(var_to_factor)
 
     # Output factors and comment
-    statement_generator(heading, "*")
     print()
     print(factor_list)
     print(comment)

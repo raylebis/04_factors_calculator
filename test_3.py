@@ -91,16 +91,16 @@ while keep_going == "":
         factor_list = ""
         comment = "One is UNITY! it only has one factor. Itself"
 
-    if factor_list == 2:
-        comment = var_to_factor, 'is a prime number'
-
-    # Perfect square finder
-    
     int_num = int(var_to_factor)
     root = math.sqrt(var_to_factor)
 
-    if int(root + 0.5) ** 2 == var_to_factor:
-        comment = var_to_factor, 'is a perfect square'
+    if factor_list == 2:
+        comment = var_to_factor, 'is a prime number'
+
+    if int (root + 0.5) ** 2 == var_to_factor:
+        comment = ("{} is a perfect square".format(var_to_factor))
+    else:
+        comment = ("{} is not a perfect square".format(var_to_factor))
 
     # generate heading...
     if var_to_factor == 1:
