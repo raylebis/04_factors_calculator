@@ -12,7 +12,7 @@ def num_check(question):
             response = int(input(question))
 
             # checks number is less than 200
-            if response < 201:
+            if 0 < response < 201:
                 return response
 
             # outputs error if input is invalid

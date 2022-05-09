@@ -30,7 +30,7 @@ def num_check(question):
             response = int(input(question))
 
             # checks number is more than zero
-            if response < 201:
+            if 0 < response < 201:
                 return response
 
             # outputs error if input is invalid
@@ -71,6 +71,8 @@ def get_factors(num):
         print(num, 'is a perfect square')
     else:
         print(num, 'is not a perfect square')
+        
+    return factor_list
 
 
 # Loop to allow multiple calculations per session
@@ -101,7 +103,7 @@ while keep_going == "":
         heading = "One is special..."
 
     else:
-        heading = "Factos of {}".format(var_to_factor)
+        heading = "Factors of {}".format(var_to_factor)
 
     # Output factors and comment
     statement_generator(heading, "*")

@@ -52,7 +52,7 @@ def num_check(question):
         except ValueError:
             print(error)
 
-# gets factors, returns a sorted list   
+
 # gets factors, returns a sorted list    
 def get_factors(num):
 
