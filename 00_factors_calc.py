@@ -1,7 +1,7 @@
-# Functions go here
 
-# Puts series of symbols at start and end of text
+
 import math
+
 
 
 def statement_generator(text, decoration):
@@ -29,6 +29,7 @@ def instructions():
     return ""
 
 # checks input is a number more than a given value
+
 def num_check(question):
     valid = False
     while not valid:
@@ -41,7 +42,7 @@ def num_check(question):
             response = int(input(question))
 
             # checks number is more than zero
-            if response < 201:
+            if 0 < response < 201:
                 return response
 
             # outputs error if input is invalid
@@ -52,9 +53,9 @@ def num_check(question):
         except ValueError:
             print(error)
 
-# gets factors, returns a sorted list
+# gets factors, returns a sorted list    
 def get_factors(num):
-    print('The factors of', num, 'are: ')
+    statement_generator("The factors of {}".format(var_to_factor),"*")
     factor_list = []
     for i in range(1, num+1):
 
@@ -64,7 +65,27 @@ def get_factors(num):
             factor_list.append(i)
 
             factor_list.sort
+        
+    print()
+    print("That integer has {} factors". format(len(factor_list)))
+    if len(factor_list) == 2:
+        print(num, 'is a prime number')
 
+    else:
+        print("1 is unity (Only has 1 factor, itself) ")
+        
+
+    # Perfect square finder
+    
+    int_num = int(num)
+    root = math.sqrt(int_num)
+
+    if int(root + 0.5) ** 2 == num:
+        print(num, 'is a perfect square')
+    else:
+        print(num, 'is not a perfect square')
+        
+    return factor_list
 # Main routine goes here
 
 # Heading
@@ -81,45 +102,19 @@ keep_going = ""
 while keep_going == "":
 
     comment = ""
+    comment_1 = ""
 
     # ask user for number to be factored...
     var_to_factor = num_check("Number: ")
-
     if var_to_factor !=1:
-        factor_list = get_factors(var_to_factor)
+        get_factors(var_to_factor)
     else:
-        factor_list = ""
+        comment_1 = "***** One is special *****"
         comment = "One is UNITY! it only has one factor. Itself"
-    
-    if (factor_list) == 2:
-        comment = "{} is a prime number.".format(var_to_factor)
-
-    elif var_to_factor ==  1:
-        print("1 is unity (Only has 1 factor, itself) ")
-
-    # Perfect square finder
-    
-    int_num = int(var_to_factor)
-    root = math.sqrt(int_num)
-
-    if int (root + 0.5) ** 2 == var_to_factor:
-        comment = ("{} is a perfect square".format(var_to_factor))
-    else:
-        comment = "{} is a prime number.".format(var_to_factor)
-
-    # generate heading...
-    if var_to_factor == 1:
-        heading = "One is special..."
-
-    # Output factors and comment
     print()
-    print(factor_list)
+    print(comment_1)
     print(comment)
-
     print()
     keep_going = input("Press <enter> to continue or any key to quit")
     print()
-
-print()
-print("Thank you for using the factors calculator")
 
