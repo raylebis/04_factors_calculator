@@ -70,10 +70,8 @@ def get_factors(num):
     print("That integer has {} factors". format(len(factor_list)))
     if len(factor_list) == 2:
         print(num, 'is a prime number')
-
     else:
-        print("1 is unity (Only has 1 factor, itself) ")
-        
+        print("That integer is not a prime number")
 
     # Perfect square finder
     
